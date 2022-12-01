@@ -1,5 +1,8 @@
 import qrcode
-
-
-img = qrcode.make("www.linkedin.com/in/tobsramp07")
-img.save("./qr code/toby.jpg")
+import csv
+name = open("name.csv", 'r')
+ds = open("link.csv", 'r')
+for each in ds:
+    print(each)
+    img = qrcode.make(each)
+    img.save("./qr code/name.png")
